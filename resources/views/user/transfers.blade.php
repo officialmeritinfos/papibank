@@ -2,28 +2,8 @@
 @section('content')
     @inject('injected','App\Defaults\Custom')
 
-    <div class="today-card-area pt-24">
-        <div class="container-fluid">
-            @include('templates.notification')
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-today-card d-flex align-items-center">
-                        <div class="flex-grow-1">
-                            <span class="today">Account Balance</span>
-                            <h6>{{$user->account_currency}} {{number_format($user->balance,2)}}</h6>
-                        </div>
 
-                        <div class="flex-shrink-0 align-self-center">
-                            <img src="{{asset('dashboard/user/images/icon/discount.png')}}" alt="Images">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container py-5">
+    <div class="container py-5 pd-top-40 mg-top-50">
         <a href="{{ route('transfer.crypto') }}" class="btn btn-sm btn-secondary mb-4">Crypto Withdrawal</a>
 
         <h2 class="text-center mb-4">Withdraw Funds</h2>

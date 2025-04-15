@@ -2,7 +2,7 @@
 @section('content')
     @inject('injected','App\Defaults\Custom')
 
-    <div class="container mt-5">
+    <div class="container mt-5  pd-top-40 mg-top-50">
         <div class="row justify-content-center">,
             @include('templates.notification')
             <div class="col-md-8">

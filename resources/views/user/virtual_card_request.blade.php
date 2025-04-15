@@ -1,7 +1,7 @@
 @extends('user.base')
 @section('content')
 
-    <div class="container my-5">
+    <div class="container my-5  pd-top-40 mg-top-50">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
                 <div class="card shadow-lg border-0">

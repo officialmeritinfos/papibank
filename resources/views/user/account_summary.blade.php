@@ -29,9 +29,9 @@
         </style>
     @endpush
 
-    <div class="container my-5">
+    <div class="container my-5  pd-top-40 mg-top-50">
         <div class="row justify-content-center">
-            <div class="col-lg-12">
+            <div class="col-lg-12 mt-5 mb-5">
                 <div class="card shadow-lg">
                     <div class="card-header">
                         Account Summary

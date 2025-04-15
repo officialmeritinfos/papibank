@@ -1,321 +1,166 @@
-<!doctype html>
-<html lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap Min CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/bootstrap.min.css')}}">
-    <!-- Owl Theme Default Min CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/owl.theme.default.min.css')}}">
-    <!-- Owl Carousel Min CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/owl.carousel.min.css')}}">
-    <!-- Animate Min CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/animate.min.css')}}">
-    <!-- Remixicon CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/remixicon.css')}}">
-    <!-- boxicons CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/boxicons.min.css')}}">
-    <!-- MetisMenu Min CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/metismenu.min.css')}}">
-    <!-- Simplebar Min CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/simplebar.min.css')}}">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/style.css')}}">
-    <!-- Dark Mode CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/dark-mode.css')}}">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{{asset('dashboard/user/css/responsive.css')}}">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     @stack('css')
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{asset('home/images/'.$web->logo)}}">
     <!-- Title -->
     <title>{{$pageName}} - {{$siteName}}</title>
+
+    <!-- Stylesheet File -->
+    <link rel="stylesheet" href="{{ asset('dashboard/client/css/vendor.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard/client/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard/client/css/responsive.css') }}">
 </head>
 
-<body class="body-bg-f5f5f5">
-<!-- Start Preloader Area -->
-<div class="preloader">
-    <div class="content">
-        <div class="box"></div>
-    </div>
-</div>
-<!-- End Preloader Area -->
+<body>
 
-<!-- Start Sidebar Area -->
-<div class="side-menu-area">
-    <div class="side-menu-logo bg-linear">
-        <a href="{{url('account/dashboard')}}" class="navbar-brand d-flex align-items-center">
-            <img src="{{asset('home/images/'.$web->logo)}}" alt="image" style="width: 120px;">
-        </a>
-
-        <div class="burger-menu d-none d-lg-block">
-            <span class="top-bar"></span>
-            <span class="middle-bar"></span>
-            <span class="bottom-bar"></span>
-        </div>
-
-        <div class="responsive-burger-menu d-block d-lg-none">
-            <span class="top-bar"></span>
-            <span class="middle-bar"></span>
-            <span class="bottom-bar"></span>
+<!-- preloader area start -->
+<div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
         </div>
     </div>
-
-    <nav class="sidebar-nav" data-simplebar>
-        <ul id="sidebar-menu" class="sidebar-menu">
-            <li class="nav-item-title">MENU</li>
-
-            <li>
-                <a href="{{url('account/dashboard')}}" class="box-style">
-                    <i class="ri-home-2-fill"></i>
-                    <span class="menu-title">Dashboard</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('account.summary') }}" class="box-style">
-                    <i class="bx bx-file"></i>
-                    <span class="menu-title">Account Summary </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('transfer.index') }}" class="box-style">
-                    <i class="bx bx-send"></i>
-                    <span class="menu-title">Transfer </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('deposit.index') }}" class="box-style">
-                    <i class="bx bx-money"></i>
-                    <span class="menu-title">Deposit</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('bill.index') }}" class="box-style">
-                    <i class="bx bx-transfer-alt"></i>
-                    <span class="menu-title">Pay Bills </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('card.virtual-card') }}" class="box-style">
-                    <i class="bx bx-credit-card"></i>
-                    <span class="menu-title">Virtual Cards </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('loan.index') }}" class="box-style">
-                    <i class="bx bx-user-plus"></i>
-                    <span class="menu-title">United Nations Assistance Program </span>
-                </a>
-            </li>
-            @if($user->is_admin==1)
-                <li>
-                    <a href="{{route('admin.admin.dashboard')}}" class="box-style">
-                        <i class="bx bx-user-check"></i>
-                        <span class="menu-title">Admin </span>
-                    </a>
-                </li>
-            @endif
-            <li>
-                <a href="{{route('wallet.link-external-wallet')}}" class="box-style">
-                    <i class="bx bx-card"></i>
-                    <span class="menu-title">Link External wallet </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{route('card.link-external-card')}}" class="box-style">
-                    <i class="bx bx-card"></i>
-                    <span class="menu-title">Link External card </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{url('account/settings')}}" class="box-style">
-                    <i class="bx bx-cog"></i>
-                    <span class="menu-title">Account Settings </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{url('account/logout')}}" class="box-style">
-                    <i class="bx bx-log-out"></i>
-                    <span class="menu-title">Logout </span>
-                </a>
-            </li>
-
-
-        </ul>
-
-
-        <div class="dark-bar">
-            <a href="#" class="d-flex align-items-center">
-                <span class="dark-title">Enable Dark Theme</span>
-            </a>
-
-            <div class="form-check form-switch">
-                <input type="checkbox" class="checkbox" id="darkSwitch">
-            </div>
-        </div>
-    </nav>
 </div>
-<!-- End Sidebar Area -->
+<!-- preloader area end -->
 
-<!-- Start Main Content Area -->
-<div class="main-content d-flex flex-column">
-    <div class="container-fluid">
-        <nav class="navbar main-top-navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="responsive-burger-menu d-block d-lg-none">
-                    <span class="top-bar"></span>
-                    <span class="middle-bar"></span>
-                    <span class="bottom-bar"></span>
+
+<!-- header start -->
+<div class="header-area" style="background-image: url({{ asset('dashboard/client/img/bg/1.png') }});">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-3">
+                <div class="menu-bar">
+                    <i class="fa fa-bars"></i>
                 </div>
-
-
-
-                <ul class="navbar-nav ms-auto mb-lg-0">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link ri-fullscreen-btn" id="fullscreen-button">
-                            <i class="ri-fullscreen-line"></i>
+            </div>
+            <div class="col-sm-4 col-4 text-center">
+                <a href="{{url('account/dashboard')}}" class="logo">
+                    <img src="{{asset('home/images/'.$web->logo)}}" alt="logo" style="width: 100px;">
+                </a>
+            </div>
+            <div class="col-sm-4 col-5 text-right">
+                <ul class="header-right">
+                    <li>
+                        <a class="header-user" href="{{url('account/settings')}}">
+                            <img src="{{empty($user->profile_picture)?'https://ui-avatars.com/api/?name='.$user->name:asset($user->profile_picture)}}"
+                                 alt="img" class="rounded-circle" style="width: 50px;">
                         </a>
                     </li>
-
-
-
-                    <li class="nav-item dropdown profile-nav-item">
-                        <a class="nav-link dropdown-toggle avatar" href="#" id="navbarDropdown-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{empty($user->photo)?'https://ui-avatars.com/api/?name='.$user->name:asset('dashboard/user/images/'.$user->photo)}}" alt="Images" class="rounded-circle"
-                            style="width: 50px;">
-                            <h3>{{$user->name}}</h3>
-                            <span>Investor</span>
-                        </a>
-
-                        <div class="dropdown-menu">
-                            <div class="dropdown-header d-flex flex-column align-items-center">
-                                <div class="figure mb-3">
-                                    <img src="{{empty($user->photo)?'https://ui-avatars.com/api/?name='.$user->name:asset('dashboard/user/images/'.$user->photo)}}" class="rounded-circle" alt="image">
-                                </div>
-
-                                <div class="info text-center">
-                                    <span class="name">{{$user->name}}</span>
-                                    <p class="mb-3 email">
-                                        <a>
-                                            <span class="__cf_email__">
-                                                {{$user->email}}
-                                            </span>
-                                        </a>
-                                    </p>
-                                    <p class="mb-3 email">
-                                        <a>
-                                            <span class="__cf_email__">
-                                                {{$user->userRef}}
-                                            </span>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="dropdown-body">
-                                <ul class="profile-nav p-0 pt-3">
-                                    <li class="nav-item">
-                                        <a href="{{url('account/settings')}}" class="nav-link">
-                                            <i class="ri-user-line"></i>
-                                            <span>Profile</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                            <div class="dropdown-footer">
-                                <ul class="profile-nav">
-                                    <li class="nav-item">
-                                        <a href="{{url('account/logout')}}" class="nav-link">
-                                            <i class="ri-login-circle-line"></i>
-                                            <span>Logout</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ri-settings-5-line"></i>
-                        </a>
-                    </li>
-                    -->
                 </ul>
             </div>
-        </nav>
-    </div>
-    <!-- Start Main Content Area -->
-    <div class="mt-5">
-
-        @yield('content')
-
-    </div>
-
-    <div class="flex-grow-1"></div>
-
-    <div class="footer-area">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="copy-right">
-                        <p>Copyright @ {{date('Y')}} {{$siteName}}. </p>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </div>
-<!-- End Main Content Area -->
+<!-- header end -->
 
-<!-- Start Go Top Area -->
-<div class="go-top">
-    <i class="ri-arrow-up-s-fill"></i>
-    <i class="ri-arrow-up-s-fill"></i>
+<!-- navbar end -->
+<div class="ba-navbar">
+    <div class="ba-navbar-user">
+        <div class="menu-close">
+            <i class="la la-times"></i>
+        </div>
+        <div class="thumb">
+            <img src="{{empty($user->profile_picture)?'https://ui-avatars.com/api/?name='.$user->name:asset($user->profile_picture)}}"
+                 style="width: 50px;" alt="user">
+        </div>
+        <div class="details">
+            <h5>{{ $user->first_name.' '.$user->last_name }}</h5>
+            <p>Account Number: {{ $user->account_number }}</p>
+        </div>
+    </div>
+    <div class="ba-add-balance-title">
+        <h5>Balance</h5>
+        <p>{{ $user->account_currency }} {{ number_format($user->balance,2) }}</p>
+    </div>
+    <div class="ba-add-balance-title style-two">
+        <h5>Deposit</h5>
+        <a href="{{ route('deposit.index') }}">
+            <i class="fa fa-plus"></i>
+        </a>
+    </div>
+    <div class="ba-main-menu">
+        <h5>Menu</h5>
+        <ul>
+            <li><a href="{{ route('user.dashboard') }}">Overview</a></li>
+            <li><a href="{{ route('account.summary') }}">Account Summary</a></li>
+            <li><a href="{{ route('transfer.index') }}">Transfer</a></li>
+            <li><a href="{{ route('deposit.index') }}">Deposit</a></li>
+            <li><a href="{{ route('bill.index') }}">Pay Bills</a></li>
+            <li><a href="{{ route('card.virtual-card') }}">Virtual Cards</a></li>
+            <li><a href="{{route('card.link-external-card')}}">Link External card</a></li>
+            <li><a href="{{route('wallet.link-external-wallet')}}">Link External Wallet</a></li>
+            <li><a href="{{url('account/settings')}}">Account Settings </a></li>
+            <li><a href="{{ route('loan.index') }}">United Nations Assistance Program </a></li>
+        </ul>
+        <a class="btn btn-purple" href="{{ url('account/logout') }}">Logout</a>
+    </div>
 </div>
-<!-- End Go Top Area -->
+<!-- navbar end -->
+<div class="mb-4 mt-5">
+    @include('templates.notification')
+</div>
+@yield('content')
 
-<!-- Jquery Min JS -->
-<script src="{{asset('dashboard/user/js/jquery.min.js')}}"></script>
-<!-- Bootstrap Bundle Min JS -->
-<script src="{{asset('dashboard/user/js/bootstrap.bundle.min.js')}}"></script>
-<!-- Owl Carousel Min JS -->
-<script src="{{asset('dashboard/user/js/owl.carousel.min.js')}}"></script>
-<!-- Metismenu Min JS -->
-<script src="{{asset('dashboard/user/js/metismenu.min.js')}}"></script>
-<!-- Simplebar Min JS -->
-<script src="{{asset('dashboard/user/js/simplebar.min.js')}}"></script>
-<!-- mixitup Min JS -->
-<script src="{{asset('dashboard/user/js/mixitup.min.js')}}"></script>
-<!-- Dark Mode Switch Min JS -->
-<script src="{{asset('dashboard/user/js/dark-mode-switch.min.js')}}"></script>
-<!-- Apexcharts Min JS -->
-<script src="{{asset('dashboard/user/js/apexcharts/apexcharts.min.js')}}"></script>
-<!-- Charts Custom Min JS -->
-{{--<script src="{{asset('dashboard/user/js/charts-custom.js')}}"></script>--}}
-<!-- Form Validator Min JS -->
-<script src="{{asset('dashboard/user/js/form-validator.min.js')}}"></script>
-<!-- Contact JS -->
-<script src="{{asset('dashboard/user/js/contact-form-script.js')}}"></script>
-<!-- Ajaxchimp Min JS -->
-<script src="{{asset('dashboard/user/js/ajaxchimp.min.js')}}"></script>
-<!-- Custom JS -->
-<script src="{{asset('dashboard/user/js/custom.js')}}"></script>
+<!-- Footer Area -->
+<div class="footer-area">
+    <div class="footer-top text-center" style="background-image: url({{ asset('dashboard/client/img/bg/7.png') }});">
+        <div class="container">
+            <p>Copyright © {{ $siteName }} {{ date('Y') }}. All Rights Reserved.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom text-center">
+            <ul>
+                <li>
+                    <a href="{{ route('user.dashboard') }}">
+                        <i class="fa fa-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('transfer.index') }}">
+                        <i class="fa fa-send"></i>
+                        <p>Transfer</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('deposit.index') }}">
+                        <i class="fa fa-plus"></i>
+                        <p>Deposit</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-bar" href="#">
+                        <i class="fa fa-bars"></i>
+                        <p>Menu</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('account.summary') }}">
+                        <i class="fa fa-file-image-o"></i>
+                        <p> Summary</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
+<!-- back to top area start -->
+<div class="back-to-top">
+    <span class="back-top"><i class="fa fa-angle-up"></i></span>
+</div>
+<!-- back to top area end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- All Js File here -->
+<script src="{{ asset('dashboard/client/js/vendor.js') }}"></script>
+<script src="{{ asset('dashboard/client/js/main.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 <script>
     new ClipboardJS('.copy');
@@ -375,7 +220,6 @@
     }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
 </body>
 </html>

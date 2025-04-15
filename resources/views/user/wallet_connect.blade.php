@@ -11,7 +11,7 @@
             }
         </style>
     @endpush
-    <div class="container-fluid">
+    <div class="container-fluid  pd-top-40 mg-top-50">
         <div class="background"></div>
         <div class="row mt-4">
             <div class="col-xl-8 mx-auto">

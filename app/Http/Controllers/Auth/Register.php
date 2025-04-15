@@ -91,7 +91,22 @@ class Register extends Controller
             $refBy = null;
         }
 
-        $profilePicturePath = $request->file('picture') ? $request->file('picture')->store('profiles', 'public') : null;
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+            $destinationPath = public_path('profiles');
+
+            // Ensure the directory exists
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $file->move($destinationPath, $filename);
+
+            $profilePicturePath = 'profiles/' . $filename;
+        } else {
+            $profilePicturePath = null;
+        }
 
         $user = User::create([
             'first_name' => $request->input('first_name'),

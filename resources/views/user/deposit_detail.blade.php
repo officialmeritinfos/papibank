@@ -1,7 +1,7 @@
 @extends('user.base')
 @section('content')
 
-    <div class="container py-5">
+    <div class="container py-5  pd-top-40 mg-top-50">
         <h2 class="text-center mb-4">Deposit Details</h2>
 
         @include('templates.notification')

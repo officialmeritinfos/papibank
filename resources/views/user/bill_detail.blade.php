@@ -1,7 +1,7 @@
 @extends('user.base')
 @section('content')
 
-    <div class="container mt-5">
+    <div class="container mt-5  pd-top-40 mg-top-50">
         @include('templates.notification')
         <div class="card shadow-sm border-0">
             <div class="card-header bg-primary text-white">

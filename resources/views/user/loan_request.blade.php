@@ -1,6 +1,6 @@
 @extends('user.base')
 @section('content')
-    <div class="container">
+    <div class="container  pd-top-40 mg-top-50">
         @include('templates.notification')
         <div class="row justify-content-center">
             <div class="col-lg-12">

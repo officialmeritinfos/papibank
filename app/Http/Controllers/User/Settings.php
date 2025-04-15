@@ -124,7 +124,24 @@ class Settings extends Controller
             return back()->with('error','Something went wrong while uploading Image');
         }
 
-        $user->profile_picture=$photo;
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $photo = uniqid() . '.' . $file->getClientOriginalExtension();
+            $destinationPath = public_path('photo');
+
+            // Ensure the directory exists
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $file->move($destinationPath, $photo);
+
+            $profilePicturePath = 'profiles/' . $photo;
+        } else {
+            return back()->with('error','Something went wrong while uploading Image');
+        }
+
+        $user->profile_picture=$profilePicturePath;
         $user->save();
 
         return back()->with('success','Image successfully updated');

@@ -4,7 +4,7 @@
 
     @if($user->isVerified==2 || $user->isVerified==3)
         <!-- DataTales Example -->
-        <div class="card">
+        <div class="card  pd-top-40 mg-top-50">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
                     {{$pageName}}
@@ -68,7 +68,7 @@
         </div>
 
     @elseif($user->isVerified==4)
-        <div class="ui-kit-card mb-24">
+        <div class="ui-kit-card mb-24  pd-top-40 mg-top-50">
             <h3>KYC Under Review</h3>
             <div class="alert alert-primary" role="alert">
                 <h4 class="alert-heading">KYC Under Review</h4>
@@ -76,7 +76,7 @@
             </div>
         </div>
     @else
-        <div class="ui-kit-card mb-24">
+        <div class="ui-kit-card mb-24  pd-top-40 mg-top-50">
             <h3>KYC Under Review</h3>
             <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">KYC Verified</h4>

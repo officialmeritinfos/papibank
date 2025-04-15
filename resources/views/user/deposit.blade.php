@@ -19,7 +19,7 @@
             .payment-details { display: none; }
         </style>
     @endpush
-    <div class="container py-5">
+    <div class="container py-5  pd-top-40 mg-top-50">
        <div class="card">
            <div class="card-body">
                @include('templates.notification')

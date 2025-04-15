@@ -3,7 +3,7 @@
     @push('css')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     @endpush
-    <div class="container my-5">
+    <div class="container my-5  pd-top-40 mg-top-50">
         <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12">
                 <div class="card shadow-lg border-0">

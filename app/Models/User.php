@@ -57,22 +57,25 @@ class User extends Authenticatable
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'user_id');
+        return $this->hasMany(AccountTransaction::class, 'user_id');
     }
 
     public function loans()
     {
-        return $this->hasMany(Loan::class, 'user_id');
+        return $this->hasMany(LoanRequest::class, 'user_id');
     }
 
     public function virtualCards()
     {
-        return $this->hasMany(VirtualCard::class, 'user_id');
+        return $this->hasMany(VirtualCardRequest::class, 'user_id');
     }
 
-    public function externalCards()
+
+    // In App\Models\User.php
+
+    public function getNameAttribute()
     {
-        return $this->hasMany(ExternalCard::class, 'user_id');
+        return trim("{$this->first_name} {$this->last_name}");
     }
 
 }

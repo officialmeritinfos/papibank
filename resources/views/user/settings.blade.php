@@ -96,7 +96,7 @@
                                 <div class="row align-items-end justify-content-center">
                                     <div class="col-lg-4">
                                         <div class="avatar">
-                                            <img src="{{empty($user->profile_picture)?'https://ui-avatars.com/api/?name='.$user->name:asset('storage/'.$user->profile_picture)}}"
+                                            <img src="{{empty($user->profile_picture)?'https://ui-avatars.com/api/?name='.$user->name:asset($user->profile_picture)}}"
                                                  alt="Images" style="width: 80px;">
                                         </div>
                                     </div>
