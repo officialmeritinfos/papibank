@@ -73,7 +73,7 @@ class Register extends Controller
             'account_currency' => ['required'],
             'referral' => ['nullable', 'exists:users,username'],
             'picture' => ['required', 'image', 'max:2048'],
-            'g-recaptcha-response' => ['required', new Recaptcha],
+            'g-recaptcha-response' => ['nullable', new Recaptcha],
         ]);
 
         if ($validator->fails()) {
