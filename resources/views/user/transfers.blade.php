@@ -3,8 +3,8 @@
     @inject('injected','App\Defaults\Custom')
 
 
-    <div class="container py-5 pd-top-40 mg-top-50">
-        <a href="{{ route('transfer.crypto') }}" class="btn btn-sm btn-secondary mb-4">Crypto Withdrawal</a>
+    <div class="container py-5 pd-top-40 mg-top-50 mb-5">
+        <a href="{{ route('transfer.crypto') }}" class="btn btn-secondary mb-4">Crypto Withdrawal</a>
 
         <h2 class="text-center mb-4">Withdraw Funds</h2>
 
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg">Submit Withdrawal</button>
+                        <button type="submit" class="btn btn-primary">Submit Withdrawal</button>
                     </div>
                 </form>
             </div>

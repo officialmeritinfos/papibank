@@ -32,11 +32,11 @@
                 </td>
                 <td>
                     @if($transaction->transaction_type === 'withdrawal')
-                        <a href="{{ route('transfer.detail', $transaction->id) }}" class="btn btn-primary btn-sm">
+                        <a href="{{ route('transfer.detail', $transaction->id) }}" class="btn btn-primary">
                             View Details
                         </a>
                     @else
-                        <a href="{{ route('deposit.detail', $transaction->id) }}" class="btn btn-secondary btn-sm">
+                        <a href="{{ route('deposit.detail', $transaction->id) }}" class="btn btn-secondary ">
                             View Details
                         </a>
                     @endif

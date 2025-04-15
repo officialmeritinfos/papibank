@@ -2,8 +2,8 @@
 @section('content')
     @inject('injected','App\Defaults\Custom')
 
-    <div class="container pd-top-40 mg-top-50">
-        <a href="{{ route('transfer.index') }}" class="btn btn-sm btn-secondary mb-4"> ←  Bank Withdrawal</a>
+    <div class="container pd-top-40 mg-top-50 mb-5s">
+        <a href="{{ route('transfer.index') }}" class="btn btn-secondary mb-4"> ←  Bank Withdrawal</a>
 
         <h2 class="text-center mb-4">Withdraw Funds</h2>
 
@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg">Submit Withdrawal</button>
+                        <button type="submit" class="btn btn-primary">Submit Withdrawal</button>
                     </div>
                 </form>
             </div>

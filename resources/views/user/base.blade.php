@@ -102,7 +102,7 @@
     </div>
 </div>
 <!-- navbar end -->
-<div class="mb-4 mt-5">
+<div class="mb-4 mt-5 pd-top-40 mg-top-50">
     @include('templates.notification')
 </div>
 @yield('content')

@@ -18,10 +18,10 @@
                         <form method="POST" action="{{ route('card.link.card') }}">
                             @csrf
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="card_type" class="form-label">Card Type</label>
-                                        <select name="card_type" class="form-select" required>
+                                        <select name="card_type" class="form-control" required>
                                             <option value="" selected>Select Card Type</option>
                                             <option value="Visa">Visa</option>
                                             <option value="Mastercard">Mastercard</option>
@@ -52,7 +52,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="card_owner" class="form-label">Card Owner</label>
                                         <input type="text" name="card_owner" class="form-control" placeholder="Enter Name" required>
@@ -70,7 +70,7 @@
                                 <div class="col-md-3">
                                     <div class="mb-3">
                                         <label for="expiry_month" class="form-label">Expiry Month</label>
-                                        <select name="expiry_month" class="form-select" required>
+                                        <select name="expiry_month" class="form-control" required>
                                             @for ($i = 1; $i <= 12; $i++)
                                                 <option value="{{ $i }}">{{ sprintf('%02d', $i) }}</option>
                                             @endfor
@@ -80,7 +80,7 @@
                                 <div class="col-md-3">
                                     <div class="mb-3">
                                         <label for="expiry_year" class="form-label">Expiry Year</label>
-                                        <select name="expiry_year" class="form-select" required>
+                                        <select name="expiry_year" class="form-control" required>
                                             @for ($i = date('Y'); $i <= date('Y') + 20; $i++)
                                                 <option value="{{ $i }}">{{ $i }}</option>
                                             @endfor
@@ -90,7 +90,7 @@
                             </div>
 
                             <div class="row mt-2">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="cvv" class="form-label">CVV</label>
                                         <input type="text" name="cvv" class="form-control" placeholder="Enter CVV" required>
