@@ -112,7 +112,7 @@
             <div class="card-body">
                 <h5>We’re here to help you!</h5>
                 <p class="text-muted">Ask a question, report an issue, or request support. Our team will get back to you via email.</p>
-                <a href="{{ route('home.contact') }}" class="btn btn-lg btn-primary">Get Support Now</a>
+                <a href="{{ route('home.contact') }}" class="btn btn-primary">Get Support Now</a>
             </div>
         </div>
     </div>
