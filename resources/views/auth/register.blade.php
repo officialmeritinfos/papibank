@@ -199,7 +199,7 @@
                     </div>
                 </div>
 
-                <h4 class="section-title"><i class="fas fa-camera mr-2"></i> Upload Passport Photograph</h4>
+                <h4 class="section-title"><i class="fas fa-camera mr-2"></i> Upload ID Photograph</h4>
                 <div class="form-group">
                     <input type="file" class="form-control" name="picture" accept="image/*" required>
                 </div>
