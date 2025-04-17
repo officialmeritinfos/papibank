@@ -44,6 +44,38 @@
 
     <link href="{{ asset('home/css/elements-css/page-title.css') }}" rel="stylesheet">
 
+    <style>
+        .watkey {
+            z-index: 9;
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            padding: 4px;
+            border: 1px solid #0d9f16;
+            border-radius: 50%;
+        }
+    </style>
+
+    <style>
+        /* Custom CSS for the Float widget */
+        .telegram-float-widget {
+            position: fixed;
+            right: 10px;
+            /* Adjust the left positioning as needed */
+            bottom: 10rem;
+            /* Adjust the bottom positioning as needed */
+            z-index: 9999;
+        }
+
+        .whatsapp-float-widget {
+            position: fixed;
+            left: 70px;
+            /* Adjust the left positioning as needed */
+            bottom: 10px;
+            /* Adjust the bottom positioning as needed */
+            z-index: 9999;
+        }
+    </style>
 </head>
 
 
@@ -181,6 +213,15 @@
     @yield('content')
 
 
+    @if(!empty($web->whatsappSupport))
+
+        <div class="telegram-float-widget">
+            <a href="{{$web->whatsappSupport}}" target="_blank">
+                <img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-256.png"
+                     alt="" width="50">
+            </a>
+        </div>
+    @endif
 
     <!-- main-footer -->
     <footer class="main-footer alternat-2">

@@ -127,7 +127,7 @@ class Register extends Controller
             'account_type' => $request->input('account_type'),
             'account_currency' => $request->input('account_currency'),
             'referral' => $refBy,
-            'profile_picture' => $profilePicturePath,
+            'idPhoto' => $profilePicturePath,
             'registrationIp' => $request->ip(),
             'email_verified_at' => $web->emailVerification==1?now():null,
             'emailVerified' => $web->emailVerification==1,

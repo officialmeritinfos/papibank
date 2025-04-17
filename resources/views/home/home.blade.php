@@ -13,6 +13,7 @@
                         <p>Experience tailored financial services designed to help you achieve your goals. Trust and innovation at the heart of everything we do.</p>
                         <div class="btn-box">
                             <a href="{{ route('register') }}" class="theme-btn-one">Create an Account</a>
+                            <a href="{{ route('login') }}" class="theme-btn-one mt-2">Login</a>
                         </div>
                     </div>
                 </div>
@@ -26,6 +27,7 @@
                         <p>At {{ $siteName }}, we provide comprehensive financial solutions with a personal touch, ensuring your success every step of the way.</p>
                         <div class="btn-box">
                             <a href="{{ route('register') }}" class="theme-btn-one">Create an Account</a>
+                            <a href="{{ route('login') }}" class="theme-btn-one mt-2">Login</a>
                         </div>
                     </div>
                 </div>
